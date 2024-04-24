@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:maxWidth="16mm"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="12mm"
+        android:layout_height="12mm"
+        app:riv_corner_radius="200dp"
+        android:src="@drawable/academy_image_test"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Academy name"
+        android:textColor="@color/gray900"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"/>
+</LinearLayout>

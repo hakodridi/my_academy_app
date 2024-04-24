@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "206251324907",
+    "firebase_url": "https://myacademy-5308a-default-rtdb.firebaseio.com",
+    "project_id": "myacademy-5308a",
+    "storage_bucket": "myacademy-5308a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206251324907:android:0ece184e974fc8e80315ae",
+        "android_client_info": {
+          "package_name": "com.abdelhak.dridi.myacademy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABXmhEKuY0nGTtqy0aO_SsXwdckZUjTxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

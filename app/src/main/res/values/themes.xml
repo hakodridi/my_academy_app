@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyAcademy" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/light</item>
+    </style>
+
+    <style name="Theme.MyAcademy" parent="Base.Theme.MyAcademy" />
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray300</item>
+        <item name="colorControlActivated">@color/warning</item>
+    </style>
+
+</resources>
