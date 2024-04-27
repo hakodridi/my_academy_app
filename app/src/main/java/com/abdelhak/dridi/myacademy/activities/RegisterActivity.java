@@ -105,7 +105,11 @@ public class RegisterActivity extends AppCompatActivity {
                             if (task1.isSuccessful()) {
                                 Log.d(Functions.TAG, "registerUserData: done");
                                 Functions.dismissProgressDialog();
-                                startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
+                                if(!academyRadio.isChecked()){
+                                    startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
+                                }else{
+                                    startActivity(new Intent(RegisterActivity.this, CompleteDataActivity.class));
+                                }
                                 finish();
                             } else {
                                 Log.e(Functions.TAG, "registerUserData: Failed");

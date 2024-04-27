@@ -1,4 +1,4 @@
-package com.abdelhak.dridi.myacademy.activities;
+package com.abdelhak.dridi.myacademy.activities.academy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.abdelhak.dridi.myacademy.R;
 
-public class CopleteDataActivity extends AppCompatActivity {
+public class AcademyProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coplete_data);
+        setContentView(R.layout.activity_academy_profile);
     }
 }

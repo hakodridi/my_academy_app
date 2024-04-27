@@ -7,25 +7,25 @@ import android.os.Bundle;
 
 import com.abdelhak.dridi.myacademy.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class CoursesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_courses);
 
 
 
-        findViewById(R.id.courses_menu_btn).setOnClickListener(v->{
-            startActivity(new Intent(HomeActivity.this, CoursesActivity.class));
+        findViewById(R.id.home_menu_btn).setOnClickListener(v->{
+            startActivity(new Intent(CoursesActivity.this, HomeActivity.class));
         });
 
         findViewById(R.id.academies_menu_btn).setOnClickListener(v->{
-            startActivity(new Intent(HomeActivity.this, AcademiesActivity.class));
+            startActivity(new Intent(CoursesActivity.this, AcademiesActivity.class));
         });
 
         findViewById(R.id.profile_menu_btn).setOnClickListener(v->{
-            startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            startActivity(new Intent(CoursesActivity.this, ProfileActivity.class));
         });
     }
 }

@@ -5,6 +5,7 @@ public class User {
     private String name;
     private String email;
     private boolean isAcademy;
+    private boolean isComplete;
     private String imagePath;
     private String phone;
     private String wilaya;
@@ -24,6 +25,7 @@ public class User {
         this.wilaya = "";
         this.commune = "";
         this.address = "";
+        this.isComplete = false;
     }
 
     public String getId() {
@@ -96,5 +98,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public boolean isComplete() {
+        return isComplete;
+    }
+
+    public void setComplete(boolean complete) {
+        isComplete = complete;
     }
 }
