@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lets Register Account"
+            android:text="Let's Register Account"
             android:textStyle="bold"
             android:textSize="22sp"
             android:textColor="@color/gray900"

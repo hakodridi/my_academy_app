@@ -5,12 +5,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.academy.AcademyHomeActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Home for academy"
-        android:textSize="22sp"
-        />
+    tools:context=".activities.academy.AcademyHomeActivity"
+    android:background="@color/light">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="15dp"
+                >
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:background_Type="fill"
+                    app:background_Color="@color/white"
+                    app:cornerRadius="12dp"
+                    app:shadow0_Outer_Blur="4dp"
+                    app:shadow0_Outer_Alpha="0.06"
+                    app:shadow0_Outer_Angle="-45"
+                    app:shadow0_Outer_Distance="4dp"
+                    app:shadow0_Outer_Color="#2C4EB3"
+                    app:shadow1_Outer_Blur="4dp"
+                    app:shadow1_Outer_Alpha="0.15"
+                    app:shadow1_Outer_Color="#A5A5A5"
+                    app:shadow1_Outer_Distance="4dp"
+                    app:shadow1_Outer_Angle="135"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <EditText
+                            android:id="@+id/search_input"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/radius_12_solid"
+                            android:hint="Search ..."
+                            android:paddingVertical="10dp"
+                            android:paddingHorizontal="20dp"
+                            android:inputType="textFilter"
+                            android:imeOptions="actionSearch"
+                            />
+
+                        <com.sinaseyfi.advancedcardview.AdvancedCardView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:background_Type="fill"
+                            app:background_Color="@color/white"
+                            app:cornerRadius="8dp"
+                            app:shadow0_Outer_Blur="4dp"
+                            app:shadow0_Outer_Alpha="0.06"
+                            app:shadow0_Outer_Angle="-45"
+                            app:shadow0_Outer_Distance="4dp"
+                            app:shadow0_Outer_Color="#2C4EB3"
+                            app:shadow1_Outer_Blur="4dp"
+                            app:shadow1_Outer_Alpha="0.15"
+                            app:shadow1_Outer_Color="#A5A5A5"
+                            app:shadow1_Outer_Distance="4dp"
+                            app:shadow1_Outer_Angle="135"
+                            android:layout_marginHorizontal="10dp"
+
+                            >
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_search"
+                                app:tint="@color/primary"
+                                android:layout_gravity="center"
+                                />
+                        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    </LinearLayout>
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/courses_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+
+            </LinearLayout>
+            <include
+                android:id="@+id/empty_view"
+                layout="@layout/view_empty"
+                android:visibility="gone"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/primary"
+                app:tint="@color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home_solid"
+                    app:tint="@color/primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/profile_menu_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_user"
+                    app:tint="@color/primary"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
 </RelativeLayout>
