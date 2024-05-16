@@ -57,11 +57,12 @@ public class AcademyHomeActivity extends AppCompatActivity {
 
         courses = new ArrayList<>();
         filteredCourses = new ArrayList<>();
+
         courseAdapter = new CourseAdapter(this, filteredCourses, position -> {
-//            Toast.makeText(this, "Item "+position+" clicked", Toast.LENGTH_SHORT).show();
             showDetailsDialog(position);
         });
         listView.setAdapter(courseAdapter);
+
 
 
 
@@ -133,6 +134,8 @@ public class AcademyHomeActivity extends AppCompatActivity {
         TextView descriptionTV = dialog.findViewById(R.id.description);
         TextView requirementsTV = dialog.findViewById(R.id.requirements);
         TextView linkTV = dialog.findViewById(R.id.link);
+        RoundedImageView userImageView = dialog.findViewById(R.id.user_image_view);
+        dialog.findViewById(R.id.like_btn).setVisibility(View.GONE);
 
         Course course = courses.get(position);
 
@@ -160,10 +163,16 @@ public class AcademyHomeActivity extends AppCompatActivity {
 
         if(userData!=null && !userData.getImagePath().isEmpty()){
             try {
-                Picasso.get().load(course.getImagePath()).into(imageView);
+                Picasso.get().load(userData.getImagePath()).into(userImageView);
             }catch (Exception e){
                 Log.e(Functions.TAG, "show academy image in detail: ", e);
             }
+        }
+
+        try {
+            Picasso.get().load(course.getImagePath()).into(imageView);
+        }catch (Exception e){
+            Log.e(Functions.TAG, "show academy image in detail: ", e);
         }
 
         dialog.show();
@@ -171,10 +180,11 @@ public class AcademyHomeActivity extends AppCompatActivity {
 
     private void getCourses() {
         showProgress();
-        courses.clear();
+
         mDatabase.child("courses").child(mAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshots) {
+                courses.clear();
                 if(snapshots.hasChildren()){
                     for (DataSnapshot snapshot : snapshots.getChildren()){
                         try {

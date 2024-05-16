@@ -41,6 +41,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseHold
     @Override
     public void onBindViewHolder(@NonNull CourseHolder holder, int position) {
         Course course = courses.get(position);
+
         holder.titleTV.setText(course.getTitle());
         holder.priceTV.setText(Functions.formatPrice(course.getPrice()));
         holder.profNameTV.setText(course.getProfName());

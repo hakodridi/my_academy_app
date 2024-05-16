@@ -222,6 +222,7 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
                     <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/user_image_view"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/circle"

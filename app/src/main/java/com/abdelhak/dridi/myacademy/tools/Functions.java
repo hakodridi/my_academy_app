@@ -2,6 +2,9 @@ package com.abdelhak.dridi.myacademy.tools;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.widget.Toast;
+
+import com.abdelhak.dridi.myacademy.activities.academy.AcademyHomeActivity;
 
 import java.text.DecimalFormat;
 import java.util.regex.Pattern;
@@ -101,4 +104,8 @@ public class Functions {
             "Ghardaia",
             "Relizane"
     };
+
+    public static void showToastError(Context context) {
+        Toast.makeText(context, "There is a problem, check your internet and retry", Toast.LENGTH_SHORT).show();
+    }
 }
